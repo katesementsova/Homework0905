@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class homework0905 {
+
+    static final Scanner SCANNER = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        // Task 3
+        whatYear();
+        // Task 2
+        isEven();
+        // Task 6
+        triangle();
+    }
+
+    static void whatYear() {
+        System.out.println("Введите год :");
+        int theYearIs = SCANNER.nextInt();
+
+        //theYearIs % 4 == 0;
+        //theYearIs % 100 == 0;
+        //theYearIs % 400 == 0;
+
+        if (theYearIs % 4 == 0) {
+            System.out.println("It's a leap year");
+        } else if (theYearIs % 100 == 0) {
+            System.out.println("It's not a leap year");
+        } else if (theYearIs % 400 == 0) {
+            System.out.println("It's a leap year");
+
+        }
+
+    }
+
+    static void isEven() {
+        System.out.println("Введите число : ");
+        int isEvenNumber = SCANNER.nextInt();
+
+        if (isEvenNumber % 2 == 0) {
+            System.out.println("Это чётное число.");
+        } else {
+            System.out.println("Это нечётное число.");
+        }
+    }
+
+    static void triangle() {
+        System.out.println("Введите сторону а: ");
+        double sideA = SCANNER.nextDouble();
+        System.out.println("Введите сторону b: ");
+        double sideB = SCANNER.nextDouble();
+        System.out.println("Введите сторону c: ");
+        double sideC = SCANNER.nextDouble();
+
+
+        if (sideA == sideB && sideB == sideC) {
+            System.out.println("Треугольник равносторонний");
+        } else if (sideA == sideB && sideB != sideC) {
+            System.out.println("Треугольник равнобедренный");
+        } else if (sideA == sideC && sideB != sideC) {
+            System.out.println("Треугольник равнобедренный");
+        } else if (sideA != sideC && sideB == sideC) {
+                System.out.println("Треугольник равнобедренный");
+        } else {
+            System.out.println("Треугольник разносторонний");
+        }
+    }
+}
+
